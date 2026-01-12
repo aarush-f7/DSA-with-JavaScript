@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Insertion</title>
+
+    <script>
+      //   let data = [55, 22, 13, 6, 35, 5];
+      //   let newdata = 90;
+      //   let position = 0;
+      //   console.warn(data);
+      //   for (let i = data.length - 1; i >= 0; i--)
+      //   {
+      //     if (i >= position)
+      //     {
+      //       data[i + 1] = data[i];
+      //       if (i == position) {
+      //         data[position] = newdata;
+      //       }
+      //     }
+      //   }
+      //   console.warn(data);
+
+      function insertEl() {
+        let data = [55, 22, 13, 6, 35, 5];
+        let newel = document.getElementById("newel").value;
+        let position = document.getElementById("position").value;
+        console.warn(data);
+        for (let i = data.length - 1; i >= 0; i--) {
+          if (i >= position) {
+            data[i + 1] = data[i];
+            if (i == position) {
+              data[i] = newel;
+            }
+          }
+        }
+        console.warn(data);
+      }
+      
+    </script>
+  </head>
+  <body>
+    
+    <input type="text" id="position" placeholder="enter position" />
+    <input type="text" id="newel" placeholder="enter new element" />
+
+    <button onclick="insertEl()">Insert</button>
+  </body>
+</html>

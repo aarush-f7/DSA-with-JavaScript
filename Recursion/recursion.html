@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recusrsion Data structure</title>
+    <script>
+        // let something = 0;
+        // function aaru(x){
+        //     console.log(x);
+        //     if (x<7){
+        //         aaru(x+1);
+        //     }
+
+        // }
+        // aaru(something);
+
+
+        // let data = 12;
+        // function factorial(item){
+        //     console.warn("item=", item)
+        //     if(item==0){
+        //         return 1;
+        //     } 
+        //     return item*factorial(item-1);
+        // }
+        
+        // console.log(factorial(data));
+
+
+
+ //ANOTHER METHOD TO FIND FACTORIAL OF ANY NUMBER  ------------------------------------
+
+//         function factorialIter(n) {
+// //   if (n < 0) return undefined; // invalid
+//   let result = 1;
+//   for (let i = 2; i <= n; i++) {
+//     result *= i;
+//   }
+//   return result;
+// }
+// console.log(factorialIter(12)); // 479001600
+
+
+
+
+//  INDIRECT RECURSION EXAMPLE ----------------------------------
+
+let money = 100;
+let totalApple = 10;
+
+function buyApple(x){
+    console.log("I have bought",totalApple, "apples in", x, "RS");
+    if (x > 0){
+        // totalApple--;
+        buyMore(x);
+    }else {
+        console.log("I don't have suffient money");
+    }
+}
+buyApple(money);
+
+function buyMore(u){
+    totalApple--;
+    u -= 10;
+    buyApple(u);
+    // console.log("buy more", u);
+}
+
+
+    </script>
+</head> 
+<body>
+    <h1>Understanding what is Recursion data structure</h1>
+</body>
+</html>

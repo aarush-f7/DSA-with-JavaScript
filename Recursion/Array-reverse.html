@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse an array with recursion</title>
+
+    <script>
+
+
+//  REVERSING AN ARRAY WITH RECURSION AND UNDERSTANDING THE LOGIC BEHIND .reverse() DEFAULT FUNCTION. 
+
+        let data = [5,47,27,9,12];
+        // let temp;
+
+        function Reverse(data, start, end){
+
+            if(start<=end){
+                console.log(data);
+                temp = data[start];
+                data[start] = data[end];
+                data[end] = temp;
+                Reverse(data, start+1, end-1);
+                
+            }
+        }
+
+        Reverse(data,0,data.length-1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

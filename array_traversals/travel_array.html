@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Traversals</title>
+
+    <script>
+      let aaru = [20, 11, 4, 87, 45, 21, 55, 3, 8, 58];
+      // for(let i=0; i<aaru.length; i++)
+      // {
+      //     document.write(`Array ${[i]} is ${aaru[i]}  <br>`);
+      // }
+
+      // let x=5;
+      // document.write(aaru[x]);
+      function getElement() {
+        let elmt = document.querySelector("#element").value;
+
+        if (
+          elmt < aaru.length &&
+          typeof parseInt(elmt) === "number" &&
+          elmt > -1
+        ) {
+          alert(aaru[elmt]);
+        } else {
+          alert("pls put valid number");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="element" />
+    <button onclick="getElement()">Get element</button>
+  </body>
+</html>

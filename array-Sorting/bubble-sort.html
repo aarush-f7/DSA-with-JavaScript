@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sorting(bubble sort)</title>
+<script>
+    // let data = [10,30,5,12,66,22,17,1,79];
+    let data = [40,30,12,25,17];
+
+    for(let i=0;i<data.length;i++){
+        for(let j=0;j<data.length;j++){
+            console.log(data);
+            if(data[j]>data[j+1]){
+            let temp = data[j];
+            data[j]=data[j+1];
+            data[j+1]=temp;
+            }
+        }
+    }
+    // console.warn(data);
+</script>
+</head>
+<body>
+        <h1>Array Sorting (bubble short) in Javascript</h1>
+</body>
+</html>
