@@ -7,7 +7,6 @@ if (show === null){
 }
 
 else{
-
     let n = Number(show);
 
 if (isNaN(n)) {
