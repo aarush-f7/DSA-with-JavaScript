@@ -5,12 +5,17 @@
  * @return {number[]}
  */
 var filter = function(arr, fn) {
-    let result = [];
+    let filteredArr = [];
 
     for(let i = 0; i < arr.length; i++){
-        if (fn(arr[i], i));
-         result.push(arr[i]);
+        if (fn(arr[i], i)){
+            filteredArr.push(arr[i]);
+        }
     }
      
-     return result;
+     return filteredArr;
 };
+
+
+arr = [0,10,20,30], fn = function indexFunction(n, i) { return i === 3 }
+console.log(filter(arr, fn)); // [0]
